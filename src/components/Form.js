@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function Form({ submitFun }) {
+function Form({ submitFun, targetMember }) {
     const defaults = { name: "", role: "", power: "", email: "" };
     const [member, setMember] = useState(defaults);
 
@@ -13,6 +13,14 @@ function Form({ submitFun }) {
         submitFun(member);
         setMember(defaults);
     }
+
+    useEffect(() => {
+        if (targetMember) {
+            setMember(targetMember);
+        } else {
+            setMember(defaults);
+        }
+    }, [targetMember]);
 
     return (
         <form onSubmit={add}>

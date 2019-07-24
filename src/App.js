@@ -22,7 +22,7 @@ function App() {
       <div className="grid">
         {team.map(member => <DictCard data={member} fun={setToEdit} buttonName="edit" />)}
       </div>
-      <Form submitFun={addMember} />
+      <Form submitFun={addMember} targetMember={toEdit} />
     </div>
   );
 }
