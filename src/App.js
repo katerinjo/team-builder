@@ -8,6 +8,7 @@ function App() {
     { name: "Bonesaw", role: "healer" },
     { name: "Taylor Hebert", role: "DPS", power: "bug control", email: "taylor@parahumans.online" }
   ]);
+  const [toEdit, setToEdit] = useState();
 
   function addMember(newMember) {
     const sorted = [...team, newMember].sort((a, b) => a.name.localeCompare(b.name));
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <div className="grid">
-        {team.map(member => <DictCard data={member} />)}
+        {team.map(member => <DictCard data={member} fun={setToEdit} buttonName="edit" />)}
       </div>
       <Form submitFun={addMember} />
     </div>
