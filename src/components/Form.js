@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function Form({ submitFun }) {
-    const [member, setMember] = useState({});
+    const defaults = { name: "" };
+    const [member, setMember] = useState(defaults);
 
     function inputHandler({ target }) {
         setMember({ ...member, [target.id]: target.value });
@@ -10,6 +11,7 @@ function Form({ submitFun }) {
     function add(ev) {
         ev.preventDefault();
         submitFun(member);
+        setMember(defaults);
     }
 
     return (
