@@ -12,6 +12,24 @@ code {
     monospace;
 }
 
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto;
+}
+
+input {
+  margin: 1em;
+}
+
+input[type="submit"] {
+  max-width: 200px;
+  text-align: center;
+  align-self: flex-end;
+}
+
 .card {
   border: 1px solid grey;
   border-radius: 4%;
