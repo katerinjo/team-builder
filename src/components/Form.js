@@ -6,11 +6,17 @@ function Form({ submitFun }) {
     function inputHandler({ target }) {
         setMember({ ...member, [target.id]: target.value });
     }
+
+    function add(ev) {
+        ev.preventDefault();
+        submitFun(member);
+    }
+
     return (
-        <form onSubmit={submitFun}>
+        <form onSubmit={add}>
             <label>
                 Name:
-            <input type="text" id="name" value={member.name} />
+            <input type="text" id="name" value={member.name} onChange={inputHandler} />
             </label>
             <input type="submit" value="Add To Team" />
         </form>
