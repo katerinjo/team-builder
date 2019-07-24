@@ -40,7 +40,7 @@ function Form({ submitFun, targetMember }) {
                 Email:
             <input type="text" id="email" value={member.email} onChange={inputHandler} />
             </label>
-            <input type="submit" value="Add To Team" />
+            <input type="submit" value={targetMember ? "Update Member" : "Add To Team"} />
         </form>
     );
 
