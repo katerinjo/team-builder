@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Form({ submitFun }) {
-    const defaults = { name: "" };
+    const defaults = { name: "", role: "", power: "", email: "" };
     const [member, setMember] = useState(defaults);
 
     function inputHandler({ target }) {

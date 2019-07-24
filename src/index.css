@@ -37,6 +37,10 @@ input[type="submit"] {
   margin: 5px;
 }
 
+.card p {
+  text-align: left;
+}
+
 .grid {
   display: flex;
   justify-content: center;

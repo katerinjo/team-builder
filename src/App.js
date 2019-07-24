@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [team, setTeam] = useState([
     { name: "Bonesaw", role: "healer" },
-    { name: "Taylor Hebert", role: "DPS" }
+    { name: "Taylor Hebert", role: "DPS", power: "bug control", email: "taylor@parahumans.online" }
   ]);
 
   function addMember(newMember) {
