@@ -10,7 +10,10 @@ function App() {
   ]);
 
   function addMember(newMember) {
-    setTeam([...team, newMember].sort());
+    const sorted = [...team, newMember].sort((a, b) => a.name.localeCompare(b.name));
+    console.log(sorted);
+    console.log("aaaaa" > "bbbbbbbbbb")
+    setTeam(sorted);
   }
 
   return (
