@@ -10,11 +10,24 @@ function App() {
   ]);
   const [toEdit, setToEdit] = useState();
 
+  function sameMember(a, b) {
+    return a.name === b.name;
+  }
+
   function addMember(newMember) {
     const sorted = [...team, newMember].sort((a, b) => a.name.localeCompare(b.name));
-    console.log(sorted);
-    console.log("aaaaa" > "bbbbbbbbbb")
     setTeam(sorted);
+  }
+
+  function editMember(member) {
+    const edited = team.map(old => {
+      if (sameMember(old, member)) {
+        return member;
+      }
+      return old;
+    });
+    setTeam(edited);
+    setToEdit(null);
   }
 
   return (
@@ -22,7 +35,7 @@ function App() {
       <div className="grid">
         {team.map(member => <DictCard data={member} fun={setToEdit} buttonName="edit" />)}
       </div>
-      <Form submitFun={addMember} targetMember={toEdit} />
+      <Form submitFun={toEdit ? editMember : addMember} targetMember={toEdit} />
     </div>
   );
 }
