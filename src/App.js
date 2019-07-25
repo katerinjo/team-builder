@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [team, setTeam] = useState([
-    { name: "Bonesaw", role: "healer" },
+    { name: "Bonesaw", role: "healer", power: "extreme surgery", email: "imgoodnowiswear@bloodbath.net" },
     { name: "Taylor Hebert", role: "DPS", power: "bug control", email: "taylor@parahumans.online" }
   ]);
   const [toEdit, setToEdit] = useState();
