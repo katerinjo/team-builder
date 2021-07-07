@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto;
+}
+
+input {
+  margin: 1em;
+}
+
+input[type="submit"] {
+  max-width: 200px;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.card {
+  border: 1px solid grey;
+  border-radius: 4%;
+  padding: 1em;
+  margin: 5px;
+}
+
+.card p {
+  text-align: left;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
